@@ -1,0 +1,508 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+
+
+void calculator() {
+int s1, s2, s3;
+cin >> s1;
+cin >> s2;
+s3 = s1+s2;
+cout << "the sum of " << s1 << " and " << s2 << " is " << s3;
+}
+
+void dataTypes(){
+     cout << "The size of int is: " << sizeof(int) <<endl;
+     cout << "The size of float: " << sizeof(float) <<endl;
+     cout << "The size of char " << sizeof(char) <<endl;
+     cout << "The size of bool " << sizeof(bool) <<endl;
+     cout << "The size of double" << sizeof(double) <<endl;
+     cout << "The size of long double is: " << sizeof(long double) <<endl;
+ }
+
+void logInForm(){
+ string username;
+ int password;
+
+ cout << "enter username: " << endl;
+ cin >> username;
+
+ cout << " enter password: " << endl;
+ cin >> password;
+
+ if (username == "faraz" && password == 1234){
+ cout << "Congratulations login successfully";
+ }
+ else{
+ cout << "invalid username & password";
+  }
+  }
+
+void ATM(){
+  
+ 	int input;
+
+ 	cout << "************ ATM MANAGMENT SYSTEM ************"<<endl<<endl;
+ 	cout << "Press 1 for Balance Inquiry: "<<endl;
+ 	cout << "Press 2 for cash Withdrawal: "<<endl;
+ 	cout << "Press 3 for Pin Change: "<<endl;
+ 	cout << "Press 4 for Services: "<<endl;
+ 	cout << "Press 5 for Fund Transfer: "<<endl;
+
+ 	cout <<endl<< "Enter your choice: ";
+ 	cin >> input;
+
+ 	switch(input){
+ 		int pin;
+ 		case 1:
+ 			cout<<endl<< "Balance Inquiry:-"<<endl;
+ 			cout << "Total amount: 50k"<< endl;
+ 			cout << "Deducted Amount: 30k"<< endl;
+ 			cout << "Current Amount: 20k"<< endl;
+ 			break;
+	
+ 			case 2:
+ 			cout<<endl<< "Cash Withdrawal:-"<<endl;
+ 			cout << "Total amount: 90k"<< endl;
+ 			cout << "Amount Withdrawal: 55k"<< endl;
+ 			cout << "Account balance: 35k"<< endl;
+ 			break;
+	
+ 			case 3:
+ 			cout<<endl<< "Pin Change:-"<<endl;
+ 			cout << "Enter Old Pin: ";
+ 			cin >> pin;
+ 			cout << "Enter New Pin: ";
+ 			cin >> pin;
+ 			cout << "Re-Enter New Pin: ";
+ 			cin >> pin;
+ 			cout << "Your Pin Code Is Change Now: ";
+ 			break;
+	
+ 			case 4:
+ 			cout<<endl<< "Services:-"<<endl;
+ 			cout << "Cash Withdrawals: "<< endl;
+ 			cout << "Balance Checking: "<< endl;
+ 			cout << "Transferring Credit: "<< endl;
+ 			break;
+	
+ 			case 5:
+ 			cout<<endl<< "Funds Transfer:-"<<endl;
+ 			cout << " Insert your debit/ATM card: "<< endl;
+ 			cout << " Enter your ATM PIN "<< endl;
+ 			cin >> pin;
+ 			cout << "Enter the required bank details. "<< endl;
+ 			cout << "Enter the amount and click on 'Yes'";
+ 			break;
+ 	}
+
+ }
+
+void payRoll(){
+     int sal;
+	
+ 	while (true){
+	
+ 	cout << "********* PAYROLL MANAGMENT SYSTEM *********"<<endl;
+ 	cout << "Enter 0 for exit or"<< endl;
+ 	cout << "Enter Your Salary: ";
+ 	cin >> sal;
+	
+ 	if(sal<=10000){
+ 		int medical, hRent, tax, total;
+ 		medical = sal*7/100;
+ 		hRent = sal*10/100;
+ 		tax = sal*5/100;
+ 		total = sal+medical+hRent-tax;
+		
+ 		cout << "Medical Allowance :" << medical << endl;
+ 		cout << "House Rent Allowance :" << hRent << endl;
+ 		cout << "Tax On Salary :" << tax << endl;
+ 		cout << "Your Total Salary :"<< total << endl<< endl;
+		
+ 	}
+ 	else if(sal>10000 && sal<=20000){
+ 		int medical, hRent, tax, total;
+ 		medical = sal*10/100;
+ 		hRent = sal*15/100;
+ 		tax = sal*8/100;
+ 		total = sal+medical+hRent-tax;
+		
+		cout << "Medical Allowance :" << medical << endl;
+ 		cout << "House Rent Allowance :" << hRent << endl;
+ 		cout << "Tax On Salary :" << tax << endl;
+ 		cout << "Your Total Salary :"<< total << endl<< endl;
+ 	}
+ 	else if(sal==0){
+ 		exit(0);
+ 	}
+ 	else {
+ int medical, hRent, tax, total;
+ 		medical = sal*15/100;
+ 		hRent = sal*20/100;
+ 		tax = sal*12/100;
+ 		total = sal+medical+hRent-tax;
+
+ 		cout << "Medical Allowance :" << medical << endl;
+ 		cout << "House Rent Allowance :" << hRent << endl;
+ 		cout << "Tax On Salary :" << tax << endl;
+ 		cout << "Your Total Salary :"<< total << endl<< endl;
+ 	}
+ }//while
+ }
+
+void schoolManagment(){
+
+	int input;
+	string name;
+	
+	cout << "\n\n\n ********** School Managment System ********* \n\n\n";
+
+	cout << "Choose an option:"<<endl;
+	cout << "1. Admin Portal:"<<endl;
+	cout << "2. Teacher Faculty:"<<endl;
+	cout << "3. Student Data:"<<endl;
+	cout << "4. Fee Structure:"<<endl;
+	cout << "Enter your choice (1-4):"<<endl;
+	cin >> input;
+	
+	switch(input){
+		case 1:
+			cout << "Welcome to admin portal" << endl;
+			cout << "Admin Name [unknown]" << endl;
+			cout << "Qualification: PhD in [Information Technology]" << endl;
+			cout << "Experiance: 20 years" << endl;
+			cout << "Salary: 50k per seccond" << endl;
+			break;
+			
+			case 2:
+			cout << "Welcome to Teacher Faculty" << endl;
+			cout << "Teaching Staff: (20 male & female teachers are available )" << endl;
+			cout << "Total Subjets: 9 subjects are available" << endl;
+			cout << "Qualification: from BSC to MASTERS" << endl;
+			cout << "Salary: 30k to 90k" << endl;
+			break;
+			
+			case 3:
+			cout << "Welcome to Student portal" << endl;
+			cout << "Classes: Nursery to Matric" << endl;
+			cout << "Student capacity: 1 thousand students" << endl;
+			cout << "Classes capacity: Each class have 30 students" << endl;
+			cout << "Sections: 2 sections of each class" << endl;
+			
+			break;
+			
+			case 4:
+			cout << "Welcome to Fee structure" << endl;
+			cout << "Nursery to Matric" << endl;
+			cout << "Admission Chammat: 5k to 10k" << endl;
+			cout << "Monthly Fee: 6k" << endl;
+			cout << "Examination Fee: 4k" << endl;
+			break;
+			
+			default:
+		cout << "Invalid choice" << endl;
+		break;
+	}
+	
+		
+}
+
+void rockPaperScissor(){
+	srand(time(NULL));
+int user = 0;
+int computer = 0;
+
+while (true){
+cout << "Rock Paper Scissor Game" << endl;
+cout << "================================"<< endl;
+cout << "1) Rock" << endl;
+cout << "2) Paper" << endl;
+cout << "3) Scissor" << endl;
+cin>>user;
+
+if (user == 1){
+	cout << "your choose rock"<<endl;	
+}	
+else if(user == 2){
+	cout << "you choose paper" << endl;
+}
+else{
+	cout << "you choose scissor"<< endl;
+}
+
+computer = rand()%3+1;
+if(computer == 1){
+	cout << "computer choose rock"<<endl;
+}
+else if(computer == 2){
+	cout << "computer choose paper" << endl;
+}
+else{
+	cout << "computer choose scissor"<< endl;
+}
+//match
+if(user == computer){
+	cout << "Match tie" << endl;
+}
+//user --> Rock
+else if(user == 1){
+	if(computer == 2){
+		cout << "you lose!" << endl;
+	}
+	if(computer == 3){
+		cout << "you win!"<< endl;
+	}
+}
+//user --> paper
+else if(user == 2){
+	if(computer == 1){
+		cout << "you win!"<< endl;
+	}
+	if(computer == 3){
+		cout << "You lose!"<<endl;
+	}
+}
+//user --> scissor
+else if(user == 3){
+	if(computer == 1){
+		cout << "you lose!"<< endl;
+	}
+	if(computer == 2){
+		cout << "you win!"<<endl;
+	}
+}
+
+
+}//while 
+}//main
+
+void CGPAcalculator(){
+    int numOfCourses;
+	double grade, totalPoints=0, totalCredits=0;
+	
+	cout << "Enter the number of this courses:";
+	cin >> numOfCourses;
+	
+	for (int i=1; i<=numOfCourses; i++){
+		int creditHours;
+		double gradePoints;
+		
+		cout << "Enter your credit hours for courses:"<<i<<":";
+		cin >> creditHours;
+		
+		cout << "Enter the grade points of the course:"<<i<<":";
+		cin >> gradePoints;
+		
+		totalPoints += (gradePoints * creditHours);
+		
+		totalCredits += creditHours;
+		
+	}
+	
+	double CGPA = totalPoints / totalCredits;
+	cout << "Your CGPA is:" << CGPA << endl;
+	
+	
+}
+
+void diamondPattern(){
+    int row,spac,col;
+//	1st pattern
+// loop for rows
+for(row=1;row<=4;row++){
+	//loop for spaces
+	for(spac=1;spac<=4-row;spac++){
+		cout<<" ";
+	}
+	//loop for printing stars
+	for(col=1;col<=row*2-1;col++){
+		cout<<"*";
+	}
+	cout<<endl;
+}
+
+//2nd pattern
+//loop for rows
+for (row=3;row>=1;row--){
+	//loop for spaces
+	for(spac=1;spac<=4-row;spac++){
+		cout<<" ";
+	}
+	//loop for printing stars
+	for(col=1;col<=2*row-1;col++){
+		cout<<"*";
+	}
+	cout<<endl;
+}
+}
+
+void mathTable(){
+    int z=1,s,a;
+	cout << "Enter any number = ";
+	cin >> s;
+	
+	cout << "Range of your table = ";
+	cin >> a;
+	
+	while(z<=a){
+		cout << s <<" x "<< z << "  = "<< z*s << endl;
+		z++;
+	}
+}
+
+void loop(){
+    int n=1;
+	while(n<=1000){
+		cout << "Pakistan ,";
+		n++;
+	}
+}
+
+void universityManagment(){
+     int input;
+     
+     while (true){
+    string name;
+    
+    cout << "\n\n-Name of university:\n" << endl;
+    cin >> name;
+    cout << name << " management system " << endl;
+
+    cout << "Choose an option:" << endl;
+    cout << "1. Admin information" << endl;
+    cout << "2. Teaching faculty" << endl;
+    cout << "3. Students data" << endl;
+    cout << "4. Fee structure" << endl;
+    cout << "Enter your choice (1-4): ";
+    cin >> input;
+    
+    switch (input) {
+        case 1:
+            cout << "ADMIN INFORMATION:" << endl;
+            cout << "Admin name: [Gcuh-admin]" << endl;
+            cout << "Admin qualifications: PhD in information technology" << endl;
+            cout << "Admin experience: 20 years in administration" << endl;
+            cout << "Admin salary: 100k" << endl;
+            break;
+        case 2:
+            cout << "TEACHING FACULTY:" << endl;
+            cout << "Teaching staff: 20 (15 females, 5 males)" << endl;
+            cout << "Teaching subjects: 9 subjects" << endl;
+            cout << "Teachers qualifications: from BSc to Masters" << endl;
+            cout << "Teachers salary: from 30k to 50k" << endl;
+            break;
+        case 3:
+            cout << "STUDENTS DATA:" << endl;
+            cout << "Students capacity: 800" << endl;
+            cout << "Classes' setting: each class has 40 students" << endl;
+            cout << "Each class has 2 sections" << endl;
+            cout << "Classes First year to fourth class" << endl;
+            cout << "Section setting: 2 sections (1 for girls, 1 for boys)" << endl;
+            break;
+        case 4:
+            cout << "FEE STRUCTURE:" << endl;
+            cout << "First year:" << endl;
+            cout << "Admission fee: 200k" << endl;
+            cout << "Monthly fee: 5k" << endl;
+            cout << "Examination fee: 1000" << endl;
+            cout << "2nd year :" << endl;
+            cout << "Admission fee: 400k" << endl;
+            cout << "Monthly fee: 7k" << endl;
+            cout << "Examination fee: 1500" << endl;
+            cout << "3rd to 4th:" << endl;
+            cout << "Admission fee: 500k" << endl;
+            cout << "Monthly fee: 10k" << endl;
+            cout << "Examination fee: 2000" << endl;
+            break;
+        default:
+            cout << "Invalid choice!" << endl;
+            break;
+    }
+} //while
+} //void
+
+
+
+
+int main() {
+    
+    int choice;
+    
+    while (true){
+    
+    cout << "Press 1 for calculator"<<endl;
+    cout << "Press 2 for dataTypes"<<endl;
+    cout << "Press 3 for logInForm"<<endl;
+    cout << "Press 4 for ATM"<<endl;
+    cout << "Press 5 for payRoll"<<endl;
+    cout << "Press 6 for schoolManagment"<<endl;
+    cout << "Press 7 for rockPaperScissor"<<endl;
+    cout << "Press 8 for CGPAcalculator"<<endl;
+    cout << "Press 9 for diamondPattern"<<endl;
+    cout << "Press 10 for mathTable"<<endl;
+    cout << "Press 11 for loop"<<endl;
+    cout << "Press 12 for universityManagment"<<endl;
+    
+    cin >> choice;
+    
+    switch (choice){
+        case 1:
+        calculator();
+        break;
+        
+         case 2:
+        dataTypes();
+        break;
+        
+         case 3:
+        logInForm();
+        break;
+        
+         case 4:
+        ATM();
+        break;
+        
+         case 5:
+        payRoll();
+        break;
+        
+         case 6:
+        schoolManagment();
+        break;
+        
+         case 7:
+        rockPaperScissor();
+        break;
+        
+         case 8:
+        CGPAcalculator();
+        break;
+        
+         case 9:
+        diamondPattern();
+        break;
+        
+         case 10:
+        mathTable();
+        break;
+        
+         case 11:
+        loop();
+        break;
+        
+         case 12:
+        universityManagment();
+        break;
+        
+        default:
+        cout<<"Invalid Choice"<<endl;
+        break;
+    }
+    } //while
+    return 0;
+} //main
+    
